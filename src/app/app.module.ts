@@ -7,14 +7,16 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { MaterialModule} from './material';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component'
+import { SecondComponent } from './second/second.component';
+import { MatchesComponent } from './matches/matches.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     FirstComponent,
-    SecondComponent
+    SecondComponent,
+    MatchesComponent
   ],
   imports: [
     BrowserModule,
