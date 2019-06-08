@@ -8,7 +8,6 @@ import { MaterialModule} from './material';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
-import { MatchesComponent } from './matches/matches.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +15,6 @@ import { MatchesComponent } from './matches/matches.component'
     NavigationComponent,
     FirstComponent,
     SecondComponent,
-    MatchesComponent
   ],
   imports: [
     BrowserModule,
