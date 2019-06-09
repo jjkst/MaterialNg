@@ -1,5 +1,5 @@
 <div class="card-deck-container" fxLayout="row wrap" fxLayout.s="column" fxLayoutWrap fxLayoutGap="1%">
-  <mat-card *ngFor="let match of matches" class="card-item">
+  <mat-card *ngFor="let match of matches" class="card-item" [style.margin-right]="'0px'">
     <mat-card-header>
       <mat-card-title>JK Tournament - {{match.MatchNumber}} of 15</mat-card-title>
       <mat-card-subtitle>Result : 1st match, at London, May 30 2019</mat-card-subtitle>
