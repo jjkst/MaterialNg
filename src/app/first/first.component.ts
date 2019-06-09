@@ -22,7 +22,7 @@ export class FirstComponent implements OnInit {
     MatchLocation: 'London',
     MatchSummary: 'Ben Stokes and Jofra Archer lead England to imposing win.'
   };
-  matches: MatchCard[] = [this.match, this.match, this.match];
+  matches: MatchCard[] = [this.match, this.match, this.match, this.match];
 
   tiles: TeamScore[] = [
     {text: 'ENG', cols: 2, rows: 1, color: 'skyblue'},

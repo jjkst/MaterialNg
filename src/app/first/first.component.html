@@ -1,16 +1,21 @@
-<div *ngFor="let match of matches" class="grid card-item" layout="horizontal" layout-align="center center">
-  <mat-card class="example-card">
+<div class="card-deck-container" fxLayout="row wrap" fxLayout.s="column" fxLayoutWrap fxLayoutGap="1%">
+  <mat-card *ngFor="let match of matches" class="card-item">
     <mat-card-header>
-      <mat-card-title>JK Tournament - 1 of 15</mat-card-title>
+      <mat-card-title>JK Tournament - {{match.MatchNumber}} of 15</mat-card-title>
       <mat-card-subtitle>Result : 1st match, at London, May 30 2019</mat-card-subtitle>
     </mat-card-header>
     <mat-grid-list cols="3" rowHeight="50px">
-        <mat-grid-tile
-            *ngFor="let tile of tiles"
-            [colspan]="tile.cols"
-            [rowspan]="tile.rows"
-            [style.background]="tile.color">
-          {{tile.text}}
+        <mat-grid-tile [colspan]=2 [rowspan]=1 [style.background]="'skyblue'">
+          {{match.HomeTeamName}}
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]=1 [rowspan]=1 [style.background]="'skyblue'">
+          {{match.HomeTeamRunsScored}}/{{match.HomeTeamWicketsLost}} ({{match.HomeTeamOversPlayed}})
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]=2 [rowspan]=1 [style.background]="'lightgreen'">
+          {{match.AwayTeamName}}
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]=1 [rowspan]=1 [style.background]="'lightgreen'">
+          {{match.AwayTeamRunsScored}}/{{match.AwayTeamWicketsLost}} ({{match.AwayTeamOversPlayed}})
         </mat-grid-tile>
       </mat-grid-list>
     <mat-card-content>
