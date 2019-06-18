@@ -1,5 +1,40 @@
-<div style="text-align:center">
-    <h1>
-        Welcome to Second
-    </h1>  
-  </div>
+<mat-grid-list cols="7" rowHeight="50px">
+    <mat-grid-tile [colspan]=2 [rowspan]=1 [style.background]="'skyblue'">
+        Tournament
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]=1 [rowspan]=1 [style.background]="'skyblue'">
+        Start Date
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]=1 [rowspan]=1 [style.background]="'skyblue'">
+        End Date
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]=1 [rowspan]=1 [style.background]="'skyblue'">
+        Matches NotStarted
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]=1 [rowspan]=1 [style.background]="'skyblue'">
+        Matches InProgress
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]=1 [rowspan]=1 [style.background]="'skyblue'">
+        Matches Completed
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list *ngFor="let tournament of tournaments" cols="7" rowHeight="45px">
+    <mat-grid-tile [colspan]=2 [rowspan]=1>
+        {{tournament.Name}}
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]=1 [rowspan]=1>
+        {{tournament.StartDate | date}}
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]=1 [rowspan]=1>
+        {{tournament.EndDate | date}}
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]=1 [rowspan]=1>
+        {{tournament.MatchesNotStarted}}
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]=1 [rowspan]=1>
+        {{tournament.MatchesInProgress}}
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]=1 [rowspan]=1>
+        {{tournament.MatchesComplete}}
+    </mat-grid-tile>
+  </mat-grid-list>

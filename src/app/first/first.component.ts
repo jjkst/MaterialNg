@@ -6,7 +6,6 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./first.component.scss']
 })
 export class FirstComponent implements OnInit {
-  
   match: MatchCard = {
     TournamentName: 'JK Tournament',
     MatchNumber: 1,
@@ -26,7 +25,6 @@ export class FirstComponent implements OnInit {
     Summary: 'Ben Stokes and Jofra Archer lead England to imposing win.',
     DeleteAccess: true
   };
-  
   matches: MatchCard[] = [this.match, this.match, this.match, this.match];
 
   constructor() { }
