@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./first.component.scss']
 })
 export class FirstComponent implements OnInit {
+  
   match: MatchCard = {
     TournamentName: 'JK Tournament',
     MatchNumber: 1,
@@ -18,10 +19,14 @@ export class FirstComponent implements OnInit {
     AwayTeamWicketsLost: 10,
     AwayTeamOversPlayed: 45,
     WinningTeamName : 'ENG',
-    MatchStatus : 'Complete',
-    MatchLocation: 'London',
-    MatchSummary: 'Ben Stokes and Jofra Archer lead England to imposing win.'
+    TotalOvers : 50,
+    Status : 'Result',
+    Date : new Date("2018-03-16"),
+    Location: 'London',
+    Summary: 'Ben Stokes and Jofra Archer lead England to imposing win.',
+    DeleteAccess: true
   };
+  
   matches: MatchCard[] = [this.match, this.match, this.match, this.match];
 
   constructor() { }
@@ -43,9 +48,10 @@ export interface MatchCard {
   AwayTeamWicketsLost: number;
   AwayTeamOversPlayed: number;
   WinningTeamName: string;
-  MatchStatus: string;
-  MatchLocation: string;
-  // MatchDate : Date;
-  // DeleteAccess : boolean;  
-  MatchSummary: string;
+  TotalOvers: number;
+  Status: string;
+  Location: string;
+  Date : Date;
+  DeleteAccess : boolean;  
+  Summary: string;
 }
