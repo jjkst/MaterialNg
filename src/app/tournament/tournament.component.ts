@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-second',
-  templateUrl: './second.component.html',
-  styleUrls: ['./second.component.scss']
+  selector: 'app-tournament',
+  templateUrl: './tournament.component.html',
+  styleUrls: ['./tournament.component.scss']
 })
-export class SecondComponent implements OnInit {
+export class TournamentComponent implements OnInit {
   tournament: Tournament = {
     Name: 'JK Tournament',
     StartDate: new Date("2018-03-16"),

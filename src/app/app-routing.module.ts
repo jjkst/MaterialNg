@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SecondComponent } from './second/second.component';
-import { FirstComponent } from './first/first.component';
+import { TournamentComponent } from './tournament/tournament.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: FirstComponent, data: { title: 'First Component' } },
-  { path: 'first', component: FirstComponent, data: { title: 'First Component' } },
-  { path: 'second', component: SecondComponent, data: { title: 'Second Component' } }
+  { path: '', component: HomeComponent, data: { title: 'Home Component' } },
+  { path: 'home', component: HomeComponent, data: { title: 'Home Component' } },
+  { path: 'tournament', component: TournamentComponent, data: { title: 'Tournament Component' } }
 ];
 
 @NgModule({
