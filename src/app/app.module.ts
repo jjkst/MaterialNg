@@ -10,6 +10,7 @@ import { MaterialModule} from './material';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { TournamentComponent } from './tournament/tournament.component';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { TournamentComponent } from './tournament/tournament.component';
     NavigationComponent,
     HomeComponent,
     TournamentComponent,
+    TeamComponent,
   ],
   imports: [
     BrowserModule,
